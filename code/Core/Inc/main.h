@@ -73,14 +73,13 @@ void Error_Handler(void);
 #define SELECT_BTN_Pin GPIO_PIN_1
 #define SELECT_BTN_GPIO_Port GPIOB
 #define SELECT_BTN_EXTI_IRQn EXTI0_1_IRQn
-#define NEXT_BTN_Pin GPIO_PIN_2
-#define NEXT_BTN_GPIO_Port GPIOB
-#define NEXT_BTN_EXTI_IRQn EXTI2_3_IRQn
 #define SIGNAL_LED_Pin GPIO_PIN_12
 #define SIGNAL_LED_GPIO_Port GPIOA
-#define RTC_INTERRUPT_Pin GPIO_PIN_3
+#define NEXT_BTN_Pin GPIO_PIN_3
+#define NEXT_BTN_GPIO_Port GPIOB
+#define NEXT_BTN_EXTI_IRQn EXTI2_3_IRQn
+#define RTC_INTERRUPT_Pin GPIO_PIN_4
 #define RTC_INTERRUPT_GPIO_Port GPIOB
-#define RTC_INTERRUPT_EXTI_IRQn EXTI2_3_IRQn
 /* USER CODE BEGIN Private defines */
 
 /* USER CODE END Private defines */

@@ -97,37 +97,75 @@ int main(void)
 
   DS1338Z_time time = {0};
 
-  time.second = 57;
-  time.minute = 20;
-  time.hour = 14;
+  DS1338Z_readTime(&hi2c1, &time);
+
   time.mode = H24;
 
   DS1338Z_writeTime(&hi2c1, &time);
-  DS1338Z_readTime(&hi2c1, &time);
 
-  display_showTime(time.hour, time.minute);
-  HAL_Delay(5000);
-
-  DS1338Z_readTime(&hi2c1, &time);
-
-  display_showTime(time.hour, time.minute);
-  HAL_Delay(5000);
-
-  uint16_t currentNumber = 0;
+  uint32_t tick = 0;
+  uint8_t lockButton = 0;
+  uint8_t selectMode = 0;
 
   while (1) {
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-	display_showNumber(currentNumber);
 
-	currentNumber++;
-
-	if (currentNumber == 10000) {
-		currentNumber = 0;
+	if (tick % 200 == 0) {
+		DS1338Z_readTime(&hi2c1, &time);
+		display_showTime(time.hour, time.minute);
 	}
 
-	HAL_Delay(50);
+	if (!lockButton) {
+		uint8_t flip;
+
+		if (HAL_GPIO_ReadPin(PREV_BTN_GPIO_Port, PREV_BTN_Pin)) {
+			if (selectMode) {
+				time.hour = time.hour == 0 ? 23 : (time.hour - 1);
+			} else {
+				flip = time.minute == 0;
+
+				if (flip) {
+					time.minute = 59;
+					time.hour = time.hour == 0 ? 23 : (time.hour - 1);
+				} else {
+					time.minute = time.minute - 1;
+				}
+			}
+
+			time.second = 0;
+
+			lockButton = 1;
+			DS1338Z_writeTime(&hi2c1, &time);
+		} else if (HAL_GPIO_ReadPin(SELECT_BTN_GPIO_Port, SELECT_BTN_Pin)) {
+			selectMode = selectMode == 1 ? 0 : 1;
+			lockButton = 1;
+		} else if (HAL_GPIO_ReadPin(NEXT_BTN_GPIO_Port, NEXT_BTN_Pin)) {
+			if (selectMode) {
+				time.hour = time.hour == 23 ? 0 : (time.hour + 1);
+			} else {
+				flip = time.minute == 59;
+
+				if (flip) {
+					time.minute = 0;
+					time.hour = time.hour == 23 ? 0 : (time.hour + 1);
+				} else {
+					time.minute = time.minute + 1;
+				}
+			}
+
+			time.second = 0;
+
+			lockButton = 1;
+			DS1338Z_writeTime(&hi2c1, &time);
+		}
+	} else if (tick % 300 == 0) {
+		lockButton = 0;
+	}
+
+	HAL_Delay(1);
+	tick++;
   }
   /* USER CODE END 3 */
 }
