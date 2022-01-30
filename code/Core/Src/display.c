@@ -32,6 +32,21 @@ void setNumber(uint8_t num) {
 	}
 }
 
+void setNumbers(uint8_t digit1, uint8_t digit2, uint8_t digit3, uint8_t digit4) {
+	setNumber(digit1);
+	setNumber(digit2);
+	setNumber(digit3);
+	setNumber(digit4);
+
+	latchNumbers();
+}
+
+void latchNumbers() {
+	HAL_GPIO_WritePin(CTRL_DATA_LATCH_GPIO_Port, CTRL_DATA_LATCH_Pin, 1);
+	HAL_Delay(1);
+	HAL_GPIO_WritePin(CTRL_DATA_LATCH_GPIO_Port, CTRL_DATA_LATCH_Pin, 0);
+}
+
 void display_init() {
 	HAL_GPIO_WritePin(CTRL_DATA_IN_GPIO_Port, CTRL_DATA_IN_Pin, 0);
 	HAL_GPIO_WritePin(CTRL_DATA_CLK_GPIO_Port, CTRL_DATA_CLK_Pin, 0);
@@ -41,13 +56,20 @@ void display_init() {
 }
 
 void display_showNumber(uint16_t number) {
-	setNumber(getSingleDigit(number, 0));
-	setNumber(getSingleDigit(number, 1));
-	setNumber(getSingleDigit(number, 2));
-	setNumber(getSingleDigit(number, 3));
+	uint8_t digit1 = getSingleDigit(number, 0);
+	uint8_t digit2 = getSingleDigit(number, 1);
+	uint8_t digit3 = getSingleDigit(number, 2);
+	uint8_t digit4 = getSingleDigit(number, 3);
 
-	HAL_GPIO_WritePin(CTRL_DATA_LATCH_GPIO_Port, CTRL_DATA_LATCH_Pin, 1);
-	HAL_Delay(1);
-	HAL_GPIO_WritePin(CTRL_DATA_LATCH_GPIO_Port, CTRL_DATA_LATCH_Pin, 0);
+	setNumbers(digit1, digit2, digit3, digit4);
+}
+
+void display_showTime(uint8_t hour, uint8_t minute) {
+	uint8_t digit1 = getSingleDigit(minute, 0);
+	uint8_t digit2 = getSingleDigit(minute, 1);
+	uint8_t digit3 = getSingleDigit(hour, 0);
+	uint8_t digit4 = getSingleDigit(hour, 1);
+
+	setNumbers(digit1, digit2, digit3, digit4);
 }
 

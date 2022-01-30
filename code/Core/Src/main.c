@@ -93,6 +93,10 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+
+  display_showTime(14, 20);
+  HAL_Delay(5000);
+
   uint16_t currentNumber = 0;
 
   while (1) {
