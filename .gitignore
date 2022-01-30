@@ -36,5 +36,5 @@
 *.ld
 *.o
 
-/Debug/**/*
-/.settings/**/*
+/code/Debug/**/*
+/code/.settings/**/*
