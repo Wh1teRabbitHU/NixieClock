@@ -30,3 +30,11 @@
 *.exe
 *.out
 *.app
+
+*.bin
+*.elf
+*.ld
+*.o
+
+/Debug/**/*
+/.settings/**/*
