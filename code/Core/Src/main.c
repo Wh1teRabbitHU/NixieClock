@@ -22,6 +22,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "display.h"
+#include "ds1338z.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -94,7 +95,22 @@ int main(void)
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
 
-  display_showTime(14, 20);
+  DS1338Z_time time = {0};
+
+  time.second = 57;
+  time.minute = 20;
+  time.hour = 14;
+  time.mode = H24;
+
+  DS1338Z_writeTime(&hi2c1, &time);
+  DS1338Z_readTime(&hi2c1, &time);
+
+  display_showTime(time.hour, time.minute);
+  HAL_Delay(5000);
+
+  DS1338Z_readTime(&hi2c1, &time);
+
+  display_showTime(time.hour, time.minute);
   HAL_Delay(5000);
 
   uint16_t currentNumber = 0;

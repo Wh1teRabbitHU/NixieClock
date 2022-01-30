@@ -4,6 +4,7 @@
 
 #include <stdint.h>
 #include "main.h"
+#include "binary.h"
 
 void display_init();
 void display_showNumber(uint16_t number);

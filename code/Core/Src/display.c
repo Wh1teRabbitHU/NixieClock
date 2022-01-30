@@ -15,10 +15,6 @@ uint8_t getSingleDigit(uint16_t number, uint8_t pos) {
 	return 0;
 }
 
-uint8_t getValueFromBinary(uint8_t binary, uint8_t pos) {
-	return ((binary >> pos) & 1) == 1 ? 1 : 0;
-}
-
 void setBit(uint8_t currentBit) {
 	HAL_GPIO_WritePin(CTRL_DATA_IN_GPIO_Port, CTRL_DATA_IN_Pin, currentBit);
 	HAL_GPIO_WritePin(CTRL_DATA_CLK_GPIO_Port, CTRL_DATA_CLK_Pin, 1);
@@ -28,7 +24,7 @@ void setBit(uint8_t currentBit) {
 
 void setNumber(uint8_t num) {
 	for (int8_t i = 3; i >= 0; i--) {
-		setBit(getValueFromBinary(num, i));
+		setBit(binary_getBit(num, i));
 	}
 }
 
