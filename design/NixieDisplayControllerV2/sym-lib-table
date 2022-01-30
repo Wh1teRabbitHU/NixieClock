@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name NixieDisplayControllerV2-rescue)(type Legacy)(uri ${KIPRJMOD}/NixieDisplayControllerV2-rescue.lib)(options "")(descr ""))
+  (lib (name HighVoltageBreakoutBoard-rescue)(type Legacy)(uri "/Users/tom/Development/Projects/Github/KiCadProjects/Projects/Breakout Boards/HighVoltageBreakoutBoard/HighVoltageBreakoutBoard-rescue.lib")(options "")(descr ""))
+)

@@ -1,0 +1,698 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 2 4
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Sheet
+S 6100 2700 700  750 
+U 61B583B3
+F0 "HighVoltagePower" 50
+F1 "HighVoltagePower.sch" 50
+F2 "+12V" I L 6100 2800 50 
+F3 "+180V" I L 6100 2900 50 
+F4 "GND" I L 6100 3000 50 
+$EndSheet
+$Comp
+L Device:Ferrite_Bead_Small FB?
+U 1 1 60A881A4
+P 4050 1150
+AR Path="/60A881A4" Ref="FB?"  Part="1" 
+AR Path="/60A7D396/60A881A4" Ref="FB?"  Part="1" 
+AR Path="/61B4742A/60A881A4" Ref="FB1"  Part="1" 
+F 0 "FB1" V 3813 1150 50  0000 C CNN
+F 1 "FB 100" V 3904 1150 50  0000 C CNN
+F 2 "Inductor_SMD:L_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 3980 1150 50  0001 C CNN
+F 3 "~" H 4050 1150 50  0001 C CNN
+	1    4050 1150
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 60A881B2
+P 2000 3950
+AR Path="/60A881B2" Ref="C?"  Part="1" 
+AR Path="/60A7D396/60A881B2" Ref="C?"  Part="1" 
+AR Path="/61B4742A/60A881B2" Ref="C3"  Part="1" 
+F 0 "C3" H 2115 3996 50  0000 L CNN
+F 1 "0.1uF" H 2115 3905 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 2038 3800 50  0001 C CNN
+F 3 "~" H 2000 3950 50  0001 C CNN
+	1    2000 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 60A881B8
+P 3350 3950
+AR Path="/60A881B8" Ref="C?"  Part="1" 
+AR Path="/60A7D396/60A881B8" Ref="C?"  Part="1" 
+AR Path="/61B4742A/60A881B8" Ref="C6"  Part="1" 
+F 0 "C6" H 3465 3996 50  0000 L CNN
+F 1 "0.1uF" H 3465 3905 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 3388 3800 50  0001 C CNN
+F 3 "~" H 3350 3950 50  0001 C CNN
+	1    3350 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 60A881C4
+P 1550 3950
+AR Path="/60A881C4" Ref="C?"  Part="1" 
+AR Path="/60A7D396/60A881C4" Ref="C?"  Part="1" 
+AR Path="/61B4742A/60A881C4" Ref="C1"  Part="1" 
+F 0 "C1" H 1665 3996 50  0000 L CNN
+F 1 "1uF" H 1665 3905 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 1588 3800 50  0001 C CNN
+F 3 "~" H 1550 3950 50  0001 C CNN
+	1    1550 3950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2700 4000 2700 4200
+Wire Wire Line
+	2700 4200 3350 4200
+Wire Wire Line
+	3350 4200 3350 4100
+Connection ~ 2700 4200
+Wire Wire Line
+	2700 4200 2700 4300
+Wire Wire Line
+	3350 4200 3800 4200
+Wire Wire Line
+	3800 4200 3800 4100
+Connection ~ 3350 4200
+Wire Wire Line
+	2000 4100 2000 4200
+Wire Wire Line
+	2000 4200 2700 4200
+Wire Wire Line
+	1550 4100 1550 4200
+Wire Wire Line
+	1550 4200 2000 4200
+Connection ~ 2000 4200
+Wire Wire Line
+	2000 3800 2000 3650
+Wire Wire Line
+	2000 3650 2350 3650
+Wire Wire Line
+	1550 3800 1550 3650
+Wire Wire Line
+	1550 3650 2000 3650
+Connection ~ 2000 3650
+Wire Wire Line
+	3350 3800 3350 3650
+Wire Wire Line
+	3350 3650 3050 3650
+Wire Wire Line
+	3800 3800 3800 3650
+Wire Wire Line
+	3800 3650 3350 3650
+Connection ~ 3350 3650
+Wire Wire Line
+	3800 3650 4350 3650
+Connection ~ 3800 3650
+Wire Wire Line
+	1300 3650 1550 3650
+Connection ~ 1550 3650
+Text HLabel 2850 2700 3    50   Input ~ 0
+GND
+$Comp
+L Device:D_TVS D1
+U 1 1 60A9807F
+P 1850 1500
+F 0 "D1" H 1900 1400 50  0000 L CNN
+F 1 "SMBJ12CA-13-F" H 1550 1600 50  0000 L CNN
+F 2 "Diode_SMD:D_SMB" H 1850 1500 50  0001 C CNN
+F 3 "~" H 1850 1500 50  0001 C CNN
+	1    1850 1500
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1350 1350 1600 1350
+Wire Wire Line
+	1850 1650 1850 1850
+Wire Wire Line
+	1850 1350 1850 1150
+Text HLabel 4500 3650 2    50   Input ~ 0
++5V
+Text HLabel 1300 3650 0    50   Input ~ 0
++12V
+Text HLabel 2700 4300 3    50   Input ~ 0
+GND
+Wire Wire Line
+	2850 2600 2850 2700
+$Comp
+L Connector:TestPoint TP?
+U 1 1 60DAD3F3
+P 3350 2700
+AR Path="/60978558/60DAD3F3" Ref="TP?"  Part="1" 
+AR Path="/60A7D396/60DAD3F3" Ref="TP?"  Part="1" 
+AR Path="/61B4742A/60DAD3F3" Ref="TP1"  Part="1" 
+F 0 "TP1" H 3300 3050 50  0000 L CNN
+F 1 "GND TP" H 3200 2950 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_D1.5mm" H 3550 2700 50  0001 C CNN
+F 3 "~" H 3550 2700 50  0001 C CNN
+	1    3350 2700
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3350 2700 3350 2600
+$Comp
+L Device:LED D2
+U 1 1 60F67ABF
+P 4350 3950
+F 0 "D2" V 4389 3832 50  0000 R CNN
+F 1 "Power Indicator" V 4298 3832 50  0000 R CNN
+F 2 "LED_SMD:LED_0603_1608Metric" H 4350 3950 50  0001 C CNN
+F 3 "~" H 4350 3950 50  0001 C CNN
+	1    4350 3950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 60F692D6
+P 4350 4350
+F 0 "R4" H 4420 4396 50  0000 L CNN
+F 1 "1K" H 4420 4305 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 4280 4350 50  0001 C CNN
+F 3 "~" H 4350 4350 50  0001 C CNN
+	1    4350 4350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4350 4200 4350 4100
+Wire Wire Line
+	4350 3800 4350 3650
+Connection ~ 4350 3650
+Wire Wire Line
+	4350 3650 4500 3650
+Text HLabel 4350 4600 3    50   Input ~ 0
+GND
+Wire Wire Line
+	4350 4600 4350 4500
+$Comp
+L Transistor_FET:IRLML6402 Q2
+U 1 1 60F70E5D
+P 3500 1250
+F 0 "Q2" V 3842 1250 50  0000 C CNN
+F 1 "PMV50EPEAR" V 3751 1250 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 3700 1175 50  0001 L CIN
+F 3 "https://www.infineon.com/dgdl/irlml6402pbf.pdf?fileId=5546d462533600a401535668d5c2263c" H 3500 1250 50  0001 L CNN
+	1    3500 1250
+	0    1    -1   0   
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 60F7B51C
+P 3100 1700
+F 0 "R2" H 3170 1746 50  0000 L CNN
+F 1 "10K" H 3170 1655 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 3030 1700 50  0001 C CNN
+F 3 "~" H 3100 1700 50  0001 C CNN
+	1    3100 1700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3100 1550 3100 1150
+Wire Wire Line
+	3100 1150 3300 1150
+$Comp
+L Device:R R3
+U 1 1 60F7DE30
+P 3500 1700
+F 0 "R3" H 3570 1746 50  0000 L CNN
+F 1 "1K" H 3570 1655 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 3430 1700 50  0001 C CNN
+F 3 "~" H 3500 1700 50  0001 C CNN
+	1    3500 1700
+	1    0    0    -1  
+$EndComp
+Connection ~ 3100 1150
+Wire Wire Line
+	3500 1550 3500 1450
+Wire Wire Line
+	3100 1850 3100 1950
+Wire Wire Line
+	3100 1950 3500 1950
+Wire Wire Line
+	3500 1950 3500 1850
+$Comp
+L pmbt3904:PMBT3904 Q1
+U 1 1 60F88403
+P 3400 2300
+F 0 "Q1" H 3590 2346 50  0000 L CNN
+F 1 "PMBT3904" H 3590 2255 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23W" H 3400 2550 50  0001 C CNN
+F 3 "https://datasheet.lcsc.com/szlcsc/1811141222_Nexperia-PMBT3904-215_C8667.pdf" H 3400 2300 50  0001 C CNN
+	1    3400 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 60F8937B
+P 2950 2300
+F 0 "R1" V 2743 2300 50  0000 C CNN
+F 1 "10K" V 2834 2300 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 2880 2300 50  0001 C CNN
+F 3 "~" H 2950 2300 50  0001 C CNN
+	1    2950 2300
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3100 2300 3200 2300
+Wire Wire Line
+	3500 2100 3500 1950
+Connection ~ 3500 1950
+Wire Wire Line
+	3500 2600 3500 2500
+Wire Wire Line
+	1600 1350 1600 1850
+Wire Wire Line
+	2400 2200 2300 2200
+Wire Wire Line
+	2300 2200 2300 1150
+$Comp
+L Switch:SW_SPDT SW1
+U 1 1 60F9DC64
+P 2600 2300
+F 0 "SW1" H 2600 2585 50  0000 C CNN
+F 1 "SW_SPDT" H 2600 2494 50  0000 C CNN
+F 2 "Custom:Toggle-Switch-SK12D07VG4" H 2600 2300 50  0001 C CNN
+F 3 "~" H 2600 2300 50  0001 C CNN
+	1    2600 2300
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	2300 1150 3100 1150
+Wire Wire Line
+	2400 2400 2300 2400
+Wire Wire Line
+	2300 2400 2300 2600
+Connection ~ 2300 2600
+Wire Wire Line
+	2300 2600 2850 2600
+Wire Wire Line
+	1850 1150 2300 1150
+Connection ~ 2300 1150
+Wire Wire Line
+	3500 2600 4100 2600
+Wire Wire Line
+	4100 2600 4100 1850
+Connection ~ 3500 2600
+Wire Wire Line
+	3700 1150 3950 1150
+Wire Wire Line
+	1600 1850 1850 1850
+Wire Wire Line
+	1350 1150 1850 1150
+Connection ~ 1850 1150
+Wire Wire Line
+	1850 2600 1850 1850
+Wire Wire Line
+	1850 2600 2300 2600
+Connection ~ 1850 1850
+Connection ~ 2850 2600
+Wire Wire Line
+	2850 2600 3350 2600
+Connection ~ 3350 2600
+Wire Wire Line
+	3350 2600 3500 2600
+$Comp
+L Connector:Barrel_Jack J3
+U 1 1 60ECDD43
+P 1050 1250
+F 0 "J3" H 1107 1575 50  0000 C CNN
+F 1 "Barrel_Jack" H 1107 1484 50  0000 C CNN
+F 2 "Connector_BarrelJack:BarrelJack_Horizontal" H 1100 1210 50  0001 C CNN
+F 3 "~" H 1100 1210 50  0001 C CNN
+	1    1050 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Regulator_Linear:AMS1117-3.3 U2
+U 1 1 61B87E2A
+P 2700 5700
+F 0 "U2" H 2700 5942 50  0000 C CNN
+F 1 "AMS1117-3.3" H 2700 5851 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-223-3_TabPin2" H 2700 5900 50  0001 C CNN
+F 3 "http://www.advanced-monolithic.com/pdf/ds1117.pdf" H 2800 5450 50  0001 C CNN
+	1    2700 5700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 61B88E2A
+P 3250 6000
+AR Path="/61B88E2A" Ref="C?"  Part="1" 
+AR Path="/60A7D396/61B88E2A" Ref="C?"  Part="1" 
+AR Path="/61B4742A/61B88E2A" Ref="C5"  Part="1" 
+F 0 "C5" H 3365 6046 50  0000 L CNN
+F 1 "0.1uF" H 3365 5955 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 3288 5850 50  0001 C CNN
+F 3 "~" H 3250 6000 50  0001 C CNN
+	1    3250 6000
+	1    0    0    -1  
+$EndComp
+Text HLabel 2700 6350 3    50   Input ~ 0
+GND
+Wire Wire Line
+	2700 6350 2700 6250
+Wire Wire Line
+	2700 6250 3250 6250
+Wire Wire Line
+	3250 6250 3250 6150
+Connection ~ 2700 6250
+Wire Wire Line
+	2700 6250 2700 6000
+Wire Wire Line
+	3250 6250 3750 6250
+Wire Wire Line
+	3750 6250 3750 6150
+Connection ~ 3250 6250
+Wire Wire Line
+	3000 5700 3250 5700
+Wire Wire Line
+	3250 5700 3250 5850
+Wire Wire Line
+	3250 5700 3750 5700
+Wire Wire Line
+	3750 5700 3750 5850
+Connection ~ 3250 5700
+$Comp
+L Device:C C?
+U 1 1 61B9492F
+P 2000 6000
+AR Path="/61B9492F" Ref="C?"  Part="1" 
+AR Path="/60A7D396/61B9492F" Ref="C?"  Part="1" 
+AR Path="/61B4742A/61B9492F" Ref="C4"  Part="1" 
+F 0 "C4" H 2115 6046 50  0000 L CNN
+F 1 "0.1uF" H 2115 5955 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 2038 5850 50  0001 C CNN
+F 3 "~" H 2000 6000 50  0001 C CNN
+	1    2000 6000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 61B94935
+P 1550 6000
+AR Path="/61B94935" Ref="C?"  Part="1" 
+AR Path="/60A7D396/61B94935" Ref="C?"  Part="1" 
+AR Path="/61B4742A/61B94935" Ref="C2"  Part="1" 
+F 0 "C2" H 1665 6046 50  0000 L CNN
+F 1 "1uF" H 1665 5955 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 1588 5850 50  0001 C CNN
+F 3 "~" H 1550 6000 50  0001 C CNN
+	1    1550 6000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2000 6150 2000 6250
+Wire Wire Line
+	2000 6250 2700 6250
+Wire Wire Line
+	1550 6150 1550 6250
+Wire Wire Line
+	1550 6250 2000 6250
+Connection ~ 2000 6250
+Wire Wire Line
+	2000 5850 2000 5700
+Wire Wire Line
+	1550 5850 1550 5700
+Wire Wire Line
+	1550 5700 2000 5700
+Wire Wire Line
+	2000 5700 2400 5700
+Connection ~ 2000 5700
+Text HLabel 6200 1150 2    50   Input ~ 0
++12V
+Wire Wire Line
+	5950 1150 6200 1150
+Connection ~ 5950 1150
+Wire Wire Line
+	5950 1150 5950 1200
+Connection ~ 5350 1850
+Wire Wire Line
+	5350 1150 5950 1150
+Connection ~ 5350 1150
+Connection ~ 4850 1850
+Connection ~ 4850 1150
+Wire Wire Line
+	5950 1850 5350 1850
+Wire Wire Line
+	4850 1850 5350 1850
+Wire Wire Line
+	4850 1150 5350 1150
+Wire Wire Line
+	5950 1850 5950 1800
+$Comp
+L Device:R R?
+U 1 1 60A881F9
+P 5950 1650
+AR Path="/60A881F9" Ref="R?"  Part="1" 
+AR Path="/60A7D396/60A881F9" Ref="R?"  Part="1" 
+AR Path="/61B4742A/60A881F9" Ref="R5"  Part="1" 
+F 0 "R5" H 6020 1696 50  0000 L CNN
+F 1 "100" H 6020 1605 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 5880 1650 50  0001 C CNN
+F 3 "~" H 5950 1650 50  0001 C CNN
+	1    5950 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D_Zener D?
+U 1 1 60A8819E
+P 5950 1350
+AR Path="/60A8819E" Ref="D?"  Part="1" 
+AR Path="/60A7D396/60A8819E" Ref="D?"  Part="1" 
+AR Path="/61B4742A/60A8819E" Ref="D3"  Part="1" 
+F 0 "D3" V 5904 1430 50  0000 L CNN
+F 1 "12V Zener" V 5995 1430 50  0000 L CNN
+F 2 "Diode_SMD:D_SOD-123" H 5950 1350 50  0001 C CNN
+F 3 "~" H 5950 1350 50  0001 C CNN
+	1    5950 1350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5350 1350 5350 1150
+Wire Wire Line
+	5350 1850 5350 1650
+$Comp
+L Device:C C?
+U 1 1 60A88175
+P 5350 1500
+AR Path="/60A88175" Ref="C?"  Part="1" 
+AR Path="/60A7D396/60A88175" Ref="C?"  Part="1" 
+AR Path="/61B4742A/60A88175" Ref="C11"  Part="1" 
+F 0 "C11" H 5465 1546 50  0000 L CNN
+F 1 "0.1uF" H 5465 1455 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 5388 1350 50  0001 C CNN
+F 3 "~" H 5350 1500 50  0001 C CNN
+	1    5350 1500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4850 1350 4850 1150
+Wire Wire Line
+	4850 1850 4850 1650
+Wire Wire Line
+	4150 1150 4350 1150
+Wire Wire Line
+	4350 1150 4850 1150
+Connection ~ 4350 1150
+Wire Wire Line
+	4350 1350 4350 1150
+Wire Wire Line
+	4100 1850 4350 1850
+Wire Wire Line
+	4350 1850 4850 1850
+Connection ~ 4350 1850
+Wire Wire Line
+	4350 1650 4350 1850
+$Comp
+L Device:CP C?
+U 1 1 60A88154
+P 4350 1500
+AR Path="/60A88154" Ref="C?"  Part="1" 
+AR Path="/60A7D396/60A88154" Ref="C?"  Part="1" 
+AR Path="/61B4742A/60A88154" Ref="C9"  Part="1" 
+F 0 "C9" H 4468 1546 50  0000 L CNN
+F 1 "220uF" H 4468 1455 50  0000 L CNN
+F 2 "Capacitor_THT:C_Radial_D8.0mm_H7.0mm_P3.50mm" H 4388 1350 50  0001 C CNN
+F 3 "~" H 4350 1500 50  0001 C CNN
+	1    4350 1500
+	1    0    0    -1  
+$EndComp
+Text HLabel 1300 5700 0    50   Input ~ 0
++12V
+Wire Wire Line
+	1300 5700 1550 5700
+Connection ~ 1550 5700
+Text HLabel 4050 5700 2    50   Input ~ 0
++3V3
+Wire Wire Line
+	3750 5700 4050 5700
+Connection ~ 3750 5700
+$Comp
+L lm2940g-50-aa3-r:LM2940G-50-AA3-R U1
+U 1 1 61BBC209
+P 2700 3650
+F 0 "U1" H 2700 3915 50  0000 C CNN
+F 1 "LM2940G-50-AA3-R" H 2700 3824 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-223" H 2700 3150 50  0001 C CNN
+F 3 "https://datasheet.lcsc.com/lcsc/1810231214_UTC-Unisonic-Tech-LM2940G-50-AA3-R_C71094.pdf" H 2700 3650 50  0001 C CNN
+	1    2700 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 60A881BE
+P 3800 3950
+AR Path="/60A881BE" Ref="C?"  Part="1" 
+AR Path="/60A7D396/60A881BE" Ref="C?"  Part="1" 
+AR Path="/61B4742A/60A881BE" Ref="C8"  Part="1" 
+F 0 "C8" H 3915 3996 50  0000 L CNN
+F 1 "22uF" H 3915 3905 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 3838 3800 50  0001 C CNN
+F 3 "~" H 3800 3950 50  0001 C CNN
+	1    3800 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 61BBF415
+P 3750 6000
+AR Path="/61BBF415" Ref="C?"  Part="1" 
+AR Path="/60A7D396/61BBF415" Ref="C?"  Part="1" 
+AR Path="/61B4742A/61BBF415" Ref="C7"  Part="1" 
+F 0 "C7" H 3865 6046 50  0000 L CNN
+F 1 "22uF" H 3865 5955 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 3788 5850 50  0001 C CNN
+F 3 "~" H 3750 6000 50  0001 C CNN
+	1    3750 6000
+	1    0    0    -1  
+$EndComp
+Text HLabel 6000 2800 0    50   Input ~ 0
++12V
+Text HLabel 6000 2900 0    50   Input ~ 0
++180V
+Text HLabel 6000 3000 0    50   Input ~ 0
+GND
+Wire Wire Line
+	6000 3000 6100 3000
+Wire Wire Line
+	6100 2900 6000 2900
+Wire Wire Line
+	6000 2800 6100 2800
+$Comp
+L Connector:TestPoint TP?
+U 1 1 61BC757C
+P 5950 1000
+AR Path="/60978558/61BC757C" Ref="TP?"  Part="1" 
+AR Path="/60A7D396/61BC757C" Ref="TP?"  Part="1" 
+AR Path="/61B4742A/61BC757C" Ref="TP4"  Part="1" 
+F 0 "TP4" H 5900 1350 50  0000 L CNN
+F 1 "+12V TP" H 5800 1250 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_D1.5mm" H 6150 1000 50  0001 C CNN
+F 3 "~" H 6150 1000 50  0001 C CNN
+	1    5950 1000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5950 1150 5950 1000
+$Comp
+L Connector:TestPoint TP?
+U 1 1 61BD046A
+P 4350 3500
+AR Path="/60978558/61BD046A" Ref="TP?"  Part="1" 
+AR Path="/60A7D396/61BD046A" Ref="TP?"  Part="1" 
+AR Path="/61B4742A/61BD046A" Ref="TP3"  Part="1" 
+F 0 "TP3" H 4300 3850 50  0000 L CNN
+F 1 "+5V TP" H 4200 3750 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_D1.5mm" H 4550 3500 50  0001 C CNN
+F 3 "~" H 4550 3500 50  0001 C CNN
+	1    4350 3500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4350 3500 4350 3650
+$Comp
+L Connector:TestPoint TP?
+U 1 1 61BD5CF5
+P 3750 5550
+AR Path="/60978558/61BD5CF5" Ref="TP?"  Part="1" 
+AR Path="/60A7D396/61BD5CF5" Ref="TP?"  Part="1" 
+AR Path="/61B4742A/61BD5CF5" Ref="TP2"  Part="1" 
+F 0 "TP2" H 3700 5900 50  0000 L CNN
+F 1 "+3V3 TP" H 3600 5800 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_D1.5mm" H 3950 5550 50  0001 C CNN
+F 3 "~" H 3950 5550 50  0001 C CNN
+	1    3750 5550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3750 5550 3750 5700
+$Comp
+L Device:Battery_Cell BT1
+U 1 1 61DBADCD
+P 6600 5000
+F 0 "BT1" H 6718 5096 50  0000 L CNN
+F 1 "3V Battery Cell" H 6718 5005 50  0000 L CNN
+F 2 "Custom:CR2032-BS-6-1" V 6600 5060 50  0001 C CNN
+F 3 "~" V 6600 5060 50  0001 C CNN
+	1    6600 5000
+	1    0    0    -1  
+$EndComp
+Text HLabel 6600 4700 1    50   Input ~ 0
+VBAT
+Text HLabel 6600 5200 3    50   Input ~ 0
+GND
+Wire Wire Line
+	6600 5200 6600 5100
+Wire Wire Line
+	6600 4800 6600 4750
+$Comp
+L Connector:TestPoint TP?
+U 1 1 61DC0CD2
+P 6350 4750
+AR Path="/60978558/61DC0CD2" Ref="TP?"  Part="1" 
+AR Path="/60A7D396/61DC0CD2" Ref="TP?"  Part="1" 
+AR Path="/61B4742A/61DC0CD2" Ref="TP5"  Part="1" 
+F 0 "TP5" V 6400 5050 50  0000 L CNN
+F 1 "VBAT TP" V 6300 4950 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_D1.5mm" H 6550 4750 50  0001 C CNN
+F 3 "~" H 6550 4750 50  0001 C CNN
+	1    6350 4750
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6350 4750 6600 4750
+Connection ~ 6600 4750
+Wire Wire Line
+	6600 4750 6600 4700
+$Comp
+L Device:C C?
+U 1 1 61DD8A8C
+P 4850 1500
+AR Path="/61DD8A8C" Ref="C?"  Part="1" 
+AR Path="/60A7D396/61DD8A8C" Ref="C?"  Part="1" 
+AR Path="/61B4742A/61DD8A8C" Ref="C10"  Part="1" 
+F 0 "C10" H 4965 1546 50  0000 L CNN
+F 1 "22uF" H 4965 1455 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 4888 1350 50  0001 C CNN
+F 3 "~" H 4850 1500 50  0001 C CNN
+	1    4850 1500
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC

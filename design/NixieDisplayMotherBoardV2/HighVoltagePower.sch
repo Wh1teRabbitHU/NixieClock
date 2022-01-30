@@ -1,0 +1,319 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 3 4
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Regulator_Switching:MC34063AD U?
+U 1 1 61B6766F
+P 2900 1550
+AR Path="/61B4742A/61B6766F" Ref="U?"  Part="1" 
+AR Path="/61B4742A/61B583B3/61B6766F" Ref="U3"  Part="1" 
+F 0 "U3" H 2900 2017 50  0000 C CNN
+F 1 "MC34063AD" H 2900 1926 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 2950 1100 50  0001 L CNN
+F 3 "http://www.onsemi.com/pub_link/Collateral/MC34063A-D.PDF" H 3400 1450 50  0001 C CNN
+	1    2900 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP C?
+U 1 1 61B67675
+P 5500 2050
+AR Path="/61B4742A/61B67675" Ref="C?"  Part="1" 
+AR Path="/61B4742A/61B583B3/61B67675" Ref="C16"  Part="1" 
+F 0 "C16" H 5618 2096 50  0000 L CNN
+F 1 "4.7uF 400V" H 5618 2005 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D8.0mm_P3.50mm" H 5538 1900 50  0001 C CNN
+F 3 "~" H 5500 2050 50  0001 C CNN
+	1    5500 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP C?
+U 1 1 61B6767B
+P 1200 2050
+AR Path="/61B4742A/61B6767B" Ref="C?"  Part="1" 
+AR Path="/61B4742A/61B583B3/61B6767B" Ref="C12"  Part="1" 
+F 0 "C12" H 1318 2096 50  0000 L CNN
+F 1 "220uF" H 1318 2005 50  0000 L CNN
+F 2 "Capacitor_THT:C_Radial_D8.0mm_H7.0mm_P3.50mm" H 1238 1900 50  0001 C CNN
+F 3 "~" H 1200 2050 50  0001 C CNN
+	1    1200 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L HighVoltageBreakoutBoard-rescue:IRF840A-Custom Q?
+U 1 1 61B67681
+P 4100 1750
+AR Path="/61B4742A/61B67681" Ref="Q?"  Part="1" 
+AR Path="/61B4742A/61B583B3/61B67681" Ref="Q3"  Part="1" 
+F 0 "Q3" H 4304 1796 50  0000 L CNN
+F 1 "IRF840A" H 4304 1705 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Horizontal_TabDown" H 4350 1675 50  0001 L CIN
+F 3 "https://media.digikey.com/pdf/Data%20Sheets/Fairchild%20PDFs/BUZ11.pdf" H 4100 1750 50  0001 L CNN
+	1    4100 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 61B67687
+P 3750 2050
+AR Path="/61B4742A/61B67687" Ref="R?"  Part="1" 
+AR Path="/61B4742A/61B583B3/61B67687" Ref="R6"  Part="1" 
+F 0 "R6" H 3820 2096 50  0000 L CNN
+F 1 "330" H 3820 2005 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 3680 2050 50  0001 C CNN
+F 3 "~" H 3750 2050 50  0001 C CNN
+	1    3750 2050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3750 2300 3750 2200
+Wire Wire Line
+	3300 1750 3750 1750
+Wire Wire Line
+	3750 1900 3750 1750
+Connection ~ 3750 1750
+Wire Wire Line
+	3750 1750 3900 1750
+$Comp
+L Device:C C?
+U 1 1 61B676AA
+P 2250 2050
+AR Path="/61B4742A/61B676AA" Ref="C?"  Part="1" 
+AR Path="/61B4742A/61B583B3/61B676AA" Ref="C14"  Part="1" 
+F 0 "C14" H 2365 2096 50  0000 L CNN
+F 1 "1nF" H 2365 2005 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 2288 1900 50  0001 C CNN
+F 3 "~" H 2250 2050 50  0001 C CNN
+	1    2250 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:L L?
+U 1 1 61B676B0
+P 3750 1350
+AR Path="/61B4742A/61B676B0" Ref="L?"  Part="1" 
+AR Path="/61B4742A/61B583B3/61B676B0" Ref="L1"  Part="1" 
+F 0 "L1" V 3940 1350 50  0000 C CNN
+F 1 "470uH 600mA" V 3850 1200 50  0000 C CNN
+F 2 "Inductor_SMD:L_10.4x10.4_H4.8" H 3750 1350 50  0001 C CNN
+F 3 "~" H 3750 1350 50  0001 C CNN
+	1    3750 1350
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2500 1750 2250 1750
+Wire Wire Line
+	2250 1750 2250 1900
+Wire Wire Line
+	2250 2300 2250 2200
+Wire Wire Line
+	2900 2300 2900 2050
+Wire Wire Line
+	3300 1550 3500 1550
+Wire Wire Line
+	3500 1550 3500 1450
+Wire Wire Line
+	3500 1350 3600 1350
+Wire Wire Line
+	3900 1350 4200 1350
+Wire Wire Line
+	4200 1350 4200 1550
+Wire Wire Line
+	4200 2400 4200 2300
+Wire Wire Line
+	3300 1450 3500 1450
+Connection ~ 3500 1450
+Wire Wire Line
+	3300 1350 3500 1350
+Connection ~ 3500 1350
+Wire Wire Line
+	3500 1350 3500 1450
+Wire Wire Line
+	3500 1350 3500 1000
+Wire Wire Line
+	3500 1000 2400 1000
+Wire Wire Line
+	2400 1000 2400 1350
+Wire Wire Line
+	2400 1350 2500 1350
+$Comp
+L Device:C C?
+U 1 1 61B676DB
+P 1750 2050
+AR Path="/61B4742A/61B676DB" Ref="C?"  Part="1" 
+AR Path="/61B4742A/61B583B3/61B676DB" Ref="C13"  Part="1" 
+F 0 "C13" H 1865 2096 50  0000 L CNN
+F 1 "0.1uF" H 1865 2005 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 1788 1900 50  0001 C CNN
+F 3 "~" H 1750 2050 50  0001 C CNN
+	1    1750 2050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2400 1350 1750 1350
+Wire Wire Line
+	1750 1350 1750 1900
+Connection ~ 2400 1350
+Wire Wire Line
+	1750 2300 1750 2200
+Wire Wire Line
+	1200 2400 1200 2300
+Wire Wire Line
+	1200 1900 1200 1350
+Wire Wire Line
+	1200 1350 1750 1350
+Connection ~ 1750 1350
+Wire Wire Line
+	1000 1200 1000 1350
+Wire Wire Line
+	1000 1350 1200 1350
+Connection ~ 1200 1350
+$Comp
+L Device:D D?
+U 1 1 61B676F8
+P 4600 1350
+AR Path="/61B4742A/61B676F8" Ref="D?"  Part="1" 
+AR Path="/61B4742A/61B583B3/61B676F8" Ref="D4"  Part="1" 
+F 0 "D4" H 4600 1133 50  0000 C CNN
+F 1 "HER504" H 4600 1224 50  0000 C CNN
+F 2 "Diode_THT:D_DO-27_P15.24mm_Horizontal" H 4600 1350 50  0001 C CNN
+F 3 "~" H 4600 1350 50  0001 C CNN
+	1    4600 1350
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4200 1350 4450 1350
+Connection ~ 4200 1350
+$Comp
+L Device:R R?
+U 1 1 61B67700
+P 5000 2050
+AR Path="/61B4742A/61B67700" Ref="R?"  Part="1" 
+AR Path="/61B4742A/61B583B3/61B67700" Ref="R7"  Part="1" 
+F 0 "R7" H 5070 2096 50  0000 L CNN
+F 1 "750k" H 5070 2005 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 4930 2050 50  0001 C CNN
+F 3 "~" H 5000 2050 50  0001 C CNN
+	1    5000 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_POT RV?
+U 1 1 61B67706
+P 5000 2700
+AR Path="/61B4742A/61B67706" Ref="RV?"  Part="1" 
+AR Path="/61B4742A/61B583B3/61B67706" Ref="RV1"  Part="1" 
+F 0 "RV1" H 4930 2654 50  0000 R CNN
+F 1 "3k" H 4930 2745 50  0000 R CNN
+F 2 "Potentiometer_THT:Potentiometer_Bourns_3296W_Vertical" H 5000 2700 50  0001 C CNN
+F 3 "~" H 5000 2700 50  0001 C CNN
+	1    5000 2700
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 61B6770C
+P 5000 3100
+AR Path="/61B4742A/61B6770C" Ref="R?"  Part="1" 
+AR Path="/61B4742A/61B583B3/61B6770C" Ref="R8"  Part="1" 
+F 0 "R8" H 5070 3146 50  0000 L CNN
+F 1 "4.7k" H 5070 3055 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 4930 3100 50  0001 C CNN
+F 3 "~" H 5000 3100 50  0001 C CNN
+	1    5000 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5000 3350 5000 3250
+Wire Wire Line
+	5000 2950 5000 2850
+Wire Wire Line
+	5000 2200 5000 2550
+Wire Wire Line
+	4750 1350 5000 1350
+Wire Wire Line
+	5000 1350 5000 1900
+Wire Wire Line
+	4850 2700 4400 2700
+Wire Wire Line
+	3450 2700 3450 1850
+Wire Wire Line
+	3450 1850 3300 1850
+$Comp
+L Device:C C?
+U 1 1 61B67720
+P 4400 3100
+AR Path="/61B4742A/61B67720" Ref="C?"  Part="1" 
+AR Path="/61B4742A/61B583B3/61B67720" Ref="C15"  Part="1" 
+F 0 "C15" H 4515 3146 50  0000 L CNN
+F 1 "0.1uF" H 4515 3055 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 4438 2950 50  0001 C CNN
+F 3 "~" H 4400 3100 50  0001 C CNN
+	1    4400 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4400 3450 4400 3350
+Wire Wire Line
+	4400 2950 4400 2700
+Connection ~ 4400 2700
+Wire Wire Line
+	4400 2700 3450 2700
+Wire Wire Line
+	5000 1350 5500 1350
+Wire Wire Line
+	5500 1350 5500 1900
+Connection ~ 5000 1350
+Wire Wire Line
+	5500 1350 5500 1200
+Connection ~ 5500 1350
+Text HLabel 1000 1200 1    50   Input ~ 0
++12V
+Text HLabel 5500 1200 1    50   Input ~ 0
++180V
+Text HLabel 4200 2400 3    50   Input ~ 0
+GND
+Text HLabel 1200 2400 3    50   Input ~ 0
+GND
+Text HLabel 4400 3450 3    50   Input ~ 0
+GND
+Wire Wire Line
+	1200 2300 1750 2300
+Connection ~ 1200 2300
+Wire Wire Line
+	1200 2300 1200 2200
+Connection ~ 1750 2300
+Wire Wire Line
+	1750 2300 2250 2300
+Connection ~ 2250 2300
+Wire Wire Line
+	2250 2300 2900 2300
+Wire Wire Line
+	5000 3350 4400 3350
+Connection ~ 4400 3350
+Wire Wire Line
+	4400 3350 4400 3250
+Wire Wire Line
+	3750 2300 4200 2300
+Connection ~ 4200 2300
+Wire Wire Line
+	4200 2300 4200 1950
+Wire Wire Line
+	5000 3350 5500 3350
+Wire Wire Line
+	5500 2200 5500 3350
+Connection ~ 5000 3350
+$EndSCHEMATC
